@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="write.js"></script>
+</head>
+</head>
+<body>
+<header><h2 style="text-align: center">게시글 등록</h2></header>
+
+<section id="writeForm">
+    <form action="/api/lists" method="post" name="boardForm">
+<!--        게시글을 쓸 수 있는 Form-->
+        <div class="writeForm" style="margin-left: 50%;  transform: translate(-20%,0)">
+        <table style="text-align: center">
+            <tr>
+                <th class="title wide">글제목</th>
+                <td><input type="text" id = "title" name="title" required="required"></td>
+            </tr>
+            <tr >
+                <th class="name wide">작성자</th>
+                <td><input type="text" id = "name" name="name" required="required"></td>
+            </tr>
+
+            <tr >
+                <th class="content wide">글내용</th>
+                <td><textarea rows="15" cols="40" id = "content" name="content" required="required"></textarea> </td>
+            </tr>
+        </table>
+        </div>
+
+<!--        작성하기 / 뒤로가기 버튼 -->
+        <div id="commandCell" style="text-align: center">
+            <a href="/index.html" onclick="writePost(event)" style="text-decoration: none">작성하기</a>
+            <button onclick="history.go(-1)" style="text-decoration: none">뒤로가기</button>
+        </div>
+    </form>
+</section>
+
+
+</body>
+</html>
+<script>
+
+</script>

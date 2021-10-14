@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="modify.js"></script>
+</head>
+<body>
+<header><h2>게시글 수정</h2></header>
+
+<section id="modifyForm">
+    <form action="/api/lists/{id}" method="post" name="boardForm">
+        <input type="hidden" name="id" value="${id}">
+
+<!--        게시글 수정할 수 있는 form-->
+        <div class="modifyForm" style="margin-left: 50%; transform: translate(-25%,0)">
+            <table id="detailTable" style="text-align: center"></table>
+        </div>
+
+<!--        수정하기 / 뒤로가기 버튼 -->
+        <div id="commandCell" style="text-align: center">
+            <a href="/index.html" onclick="modifyPost(event)" style="text-decoration: none">수정하기</a>
+            <button onclick="history.go(-1) " style="text-decoration: none">뒤로가기</button>
+        </div>
+    </form>
+</section>
+
+</body>
+</html>
+<script>
+
+</script>
